@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="Sign_upStyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="countrySelect.css">
+  </head>
+  <body>
+      <div class="tick-section">
+        <ul>
+          <li>
+            <h4>Lorem Ipsum</h4>
+            <p class="lorem1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Proin 
+              augue ipsum, aliquam et est quis, maximus tempus ante.
+            </p>
+          </li>
+          <li>
+            <h4>Maecenas egestas</h4>
+            <p class="lorem1">
+              Maecenas egestas orci mollis nibh pretium, sit amet lacinia mauris
+              blandit.
+            </p>
+          </li>
+          <li>
+            <h4>Suspendisse faucibus felis</h4>
+            <p class="lorem1">
+              Suspendisse faucibus felis id bibendum rhoncus. Phasellus neque
+              metus, varius id ultrices in, bibendum eget dolor. Ut augue felis,
+              sodales ut diam nec, congue vehicula turpis.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container2">
+        <h3 class="head">Create an account</h3>
+        <form>
+          <label class="email" for="email">Email</label> 
+          <input type="text" placeholder="" /> 
+          <label class="full_name">Full Name</label> 
+          <input type="text" placeholder="" />
+          <!-- Country selection section starts -->
+          <label class="country" for="country_selector">Country&nbsp;<i class="fas fa-info-square"></i></label> 
+          <div class="form-item">
+            <input id="country_selector" type="text">
+            <label for="country_selector" style="display:none;">Select a country</label>
+          </div>
+          <div class="form-item" style="display:none;">
+            <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+            <label for="country_selector_code">selected country</label>
+          </div>
+          <button type="submit" style="display:none;">Submit</button>
+          <button type="submit" style="display:none;">Submit</button>
+          <!-- Country selection section end -->
+          <label class="password" for="password">Password</label>
+          <input type="password" placeholder="" />
+          <label class="password_again">Password (again)</label>
+          <input type="password" placeholder="" />
+          
+          <input type="checkbox" id="checkbox"/>
+          <label for="checkbox" id="pale3">Get emails from us.</label>
+          
+          <button type="submit">Create account</button>
+          <p id="pale">Have an account?<a href="index.html"> Sign in</a></p>
+        </form>
+      </div>
+    <div class="pale2">Privacy & terms</div>
+    <script src="jQuery.js"></script>
+		<script src="countrySelect.js"></script>
+    <script src="script.js"></script>
+    <script>
+			$("#country_selector").countrySelect({
+				defaultCountry: "us",
+				// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+				responsiveDropdown: true,
+			});
+		</script>
+  </body>
+</html>
